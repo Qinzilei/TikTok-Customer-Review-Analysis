@@ -1,0 +1,670 @@
+{
+  "app_name": "TikTok",
+  "analyzed_at": "2026-07-03T18:26:44.956640+00:00",
+  "date_range": {
+    "start": "2026-06-03",
+    "end": "2026-07-02"
+  },
+  "total_reviews": 18293,
+  "mean_rating": 3.849,
+  "pct_negative": 25.8,
+  "pct_dev_reply": 83.3,
+  "peak_day": {
+    "date": "2026-06-25",
+    "count": 803
+  },
+  "lowest_rating_day": {
+    "date": "2026-06-03",
+    "avg_rating": 3.32
+  },
+  "wow_rating_change": -0.126,
+  "star_distribution": {
+    "1": 3799,
+    "2": 921,
+    "3": 954,
+    "4": 1185,
+    "5": 11434
+  },
+  "sentiment_distribution": {
+    "positive": 61.1,
+    "neutral": 23.4,
+    "negative": 15.6
+  },
+  "theme_counts": {
+    "Algorithm": 241,
+    "Ads": 236,
+    "Crashes": 228,
+    "AccountBan": 191,
+    "Privacy": 86,
+    "ContentModeration": 74
+  },
+  "theme_share_of_negative_pct": {
+    "Algorithm": 5.1,
+    "Ads": 5.0,
+    "Crashes": 4.8
+  },
+  "top_negative_versions": {
+    "Unknown": 1532,
+    "45.5.4": 924,
+    "45.7.3": 836,
+    "45.4.3": 542,
+    "45.3.3": 79
+  },
+  "tfidf_terms": [
+    {
+      "term": "app",
+      "score": 299.0274
+    },
+    {
+      "term": "tiktok",
+      "score": 228.8571
+    },
+    {
+      "term": "account",
+      "score": 118.5186
+    },
+    {
+      "term": "like",
+      "score": 99.3139
+    },
+    {
+      "term": "videos",
+      "score": 98.2438
+    },
+    {
+      "term": "don",
+      "score": 97.2468
+    },
+    {
+      "term": "video",
+      "score": 91.4194
+    },
+    {
+      "term": "just",
+      "score": 89.1018
+    },
+    {
+      "term": "good",
+      "score": 88.1337
+    },
+    {
+      "term": "time",
+      "score": 79.9978
+    },
+    {
+      "term": "ads",
+      "score": 78.9409
+    },
+    {
+      "term": "bad",
+      "score": 78.035
+    },
+    {
+      "term": "update",
+      "score": 77.1323
+    },
+    {
+      "term": "fix",
+      "score": 66.3508
+    },
+    {
+      "term": "people",
+      "score": 65.0639
+    }
+  ],
+  "top_keywords": [
+    {
+      "term": "app",
+      "score": 1071.7391
+    },
+    {
+      "term": "good",
+      "score": 781.8138
+    },
+    {
+      "term": "tiktok",
+      "score": 740.7304
+    },
+    {
+      "term": "love",
+      "score": 459.1859
+    },
+    {
+      "term": "best",
+      "score": 340.9291
+    },
+    {
+      "term": "like",
+      "score": 330.655
+    },
+    {
+      "term": "nice",
+      "score": 314.6788
+    },
+    {
+      "term": "account",
+      "score": 269.4003
+    },
+    {
+      "term": "video",
+      "score": 245.8753
+    },
+    {
+      "term": "videos",
+      "score": 233.6376
+    },
+    {
+      "term": "good app",
+      "score": 205.5167
+    },
+    {
+      "term": "just",
+      "score": 196.5062
+    },
+    {
+      "term": "don",
+      "score": 177.6376
+    },
+    {
+      "term": "time",
+      "score": 174.289
+    },
+    {
+      "term": "use",
+      "score": 159.2732
+    },
+    {
+      "term": "great",
+      "score": 157.0125
+    },
+    {
+      "term": "amazing",
+      "score": 156.0172
+    },
+    {
+      "term": "best app",
+      "score": 155.0563
+    },
+    {
+      "term": "love app",
+      "score": 154.2459
+    },
+    {
+      "term": "live",
+      "score": 150.3158
+    }
+  ],
+  "representative_quotes": {
+    "Algorithm": {
+      "content": "I don't know what happened but as of today my algorithm is screwed up. I keep getting pushed videos about using features when posting videos, \"viral\" trends, fake accounts with stolen clips, etc., absolutely everything I have no interest in and no matter how many times I press \"not interested\", or r",
+      "score": 1,
+      "thumbsUpCount": 631,
+      "at": "2026-07-02T01:56:21+00:00"
+    },
+    "Ads": {
+      "content": "My past review still stands, but: STOP ADVERTISING TO ME! OH MY GOD! IT'S DRIVING ME INSANE! EVERY FIFTH POST IS AN AD. THE SYSTEM NOTIFICATIONS GO CRAZY TRYING TO ADVERTISE THE SHOP TO ME EVERYDAY. I KEPT RECEIEVING EMAIL MARKETING NOTIFICATIONS DESPITE TURNING TIKTOK EMAIL NOTIFICATIONS OFF, AND I",
+      "score": 1,
+      "thumbsUpCount": 13016,
+      "at": "2026-06-27T16:38:10+00:00"
+    },
+    "Crashes": {
+      "content": "tiktok is always freezing my phone, often with the sound still playing. I thought it was just an old phone issue. I have a brand new phone, literally a week old and it's doing exactly the same thing, only it makes my phone restart. What the hell is going on? what is wrong with your app that it makes",
+      "score": 1,
+      "thumbsUpCount": 1267,
+      "at": "2026-06-14T19:36:26+00:00"
+    },
+    "AccountBan": {
+      "content": "pros: great tools for posting and really easy to use. Also, texting friends or family is available. Cons: messed up live audio setting (when turning off phone), bad moderation, random warning given for no reason (possible false ban). I personally give this a 2.5) because of the cons. ( forgot to men",
+      "score": 2,
+      "thumbsUpCount": 34,
+      "at": "2026-06-07T02:54:01+00:00"
+    },
+    "Privacy": {
+      "content": "it got worse today! I used to love this app. it was a great way of sharing videos and looking at different channels and accounts. but they have now implemented a nasty AI moderation algorithm that Flagg's everything as violation of their policies, without giving you an explanation and less than half",
+      "score": 1,
+      "thumbsUpCount": 19,
+      "at": "2026-06-05T02:59:09+00:00"
+    }
+  },
+  "insights": [
+    "18,293 reviews collected over the last 30 days with an average rating of 3.85 stars.",
+    "25.8% of reviews are negative (1–2 stars).",
+    "Peak review volume on 2026-06-25 00:00:00 (803 reviews).",
+    "Lowest average rating on 2026-06-03 00:00:00 (3.32 stars).",
+    "Top complaint themes among negative reviews: Algorithm (5.1% of negative), Ads (5.0% of negative), Crashes (4.8% of negative).",
+    "Average rating declined by 0.13 stars week-over-week."
+  ],
+  "_daily": [
+    {
+      "review_date": "2026-06-03",
+      "review_count": 103,
+      "avg_rating": 3.320388349514563,
+      "rolling_7d_rating": 3.320388349514563
+    },
+    {
+      "review_date": "2026-06-04",
+      "review_count": 617,
+      "avg_rating": 3.782820097244733,
+      "rolling_7d_rating": 3.551604223379648
+    },
+    {
+      "review_date": "2026-06-05",
+      "review_count": 543,
+      "avg_rating": 3.8158379373848987,
+      "rolling_7d_rating": 3.639682128048065
+    },
+    {
+      "review_date": "2026-06-06",
+      "review_count": 637,
+      "avg_rating": 3.8979591836734695,
+      "rolling_7d_rating": 3.7042513919544158
+    },
+    {
+      "review_date": "2026-06-07",
+      "review_count": 564,
+      "avg_rating": 3.8191489361702127,
+      "rolling_7d_rating": 3.727230900797575
+    },
+    {
+      "review_date": "2026-06-08",
+      "review_count": 588,
+      "avg_rating": 3.892857142857143,
+      "rolling_7d_rating": 3.75483527447417
+    },
+    {
+      "review_date": "2026-06-09",
+      "review_count": 512,
+      "avg_rating": 3.83203125,
+      "rolling_7d_rating": 3.76586327097786
+    },
+    {
+      "review_date": "2026-06-10",
+      "review_count": 558,
+      "avg_rating": 3.6792114695340503,
+      "rolling_7d_rating": 3.8171237166949297
+    },
+    {
+      "review_date": "2026-06-11",
+      "review_count": 629,
+      "avg_rating": 3.833068362480127,
+      "rolling_7d_rating": 3.824302040299986
+    },
+    {
+      "review_date": "2026-06-12",
+      "review_count": 720,
+      "avg_rating": 3.9319444444444445,
+      "rolling_7d_rating": 3.840888684165635
+    },
+    {
+      "review_date": "2026-06-13",
+      "review_count": 793,
+      "avg_rating": 4.020176544766708,
+      "rolling_7d_rating": 3.858348307178955
+    },
+    {
+      "review_date": "2026-06-14",
+      "review_count": 689,
+      "avg_rating": 3.9753265602322205,
+      "rolling_7d_rating": 3.88065939633067
+    },
+    {
+      "review_date": "2026-06-15",
+      "review_count": 619,
+      "avg_rating": 3.8449111470113086,
+      "rolling_7d_rating": 3.873809968352694
+    },
+    {
+      "review_date": "2026-06-16",
+      "review_count": 585,
+      "avg_rating": 3.871794871794872,
+      "rolling_7d_rating": 3.8794904857519614
+    },
+    {
+      "review_date": "2026-06-17",
+      "review_count": 595,
+      "avg_rating": 3.7445378151260504,
+      "rolling_7d_rating": 3.888822820836533
+    },
+    {
+      "review_date": "2026-06-18",
+      "review_count": 647,
+      "avg_rating": 3.9149922720247297,
+      "rolling_7d_rating": 3.9005262364857622
+    },
+    {
+      "review_date": "2026-06-19",
+      "review_count": 678,
+      "avg_rating": 4.017699115044247,
+      "rolling_7d_rating": 3.9127769037143056
+    },
+    {
+      "review_date": "2026-06-20",
+      "review_count": 687,
+      "avg_rating": 3.925764192139738,
+      "rolling_7d_rating": 3.899289424767595
+    },
+    {
+      "review_date": "2026-06-21",
+      "review_count": 679,
+      "avg_rating": 3.8630338733431517,
+      "rolling_7d_rating": 3.883247612354871
+    },
+    {
+      "review_date": "2026-06-22",
+      "review_count": 625,
+      "avg_rating": 3.8512,
+      "rolling_7d_rating": 3.8841460199246844
+    },
+    {
+      "review_date": "2026-06-23",
+      "review_count": 561,
+      "avg_rating": 3.8698752228163995,
+      "rolling_7d_rating": 3.883871784356331
+    },
+    {
+      "review_date": "2026-06-24",
+      "review_count": 694,
+      "avg_rating": 3.844380403458213,
+      "rolling_7d_rating": 3.8981350112609254
+    },
+    {
+      "review_date": "2026-06-25",
+      "review_count": 803,
+      "avg_rating": 3.909090909090909,
+      "rolling_7d_rating": 3.897291959413237
+    },
+    {
+      "review_date": "2026-06-26",
+      "review_count": 588,
+      "avg_rating": 3.8996598639455784,
+      "rolling_7d_rating": 3.8804292092562847
+    },
+    {
+      "review_date": "2026-06-27",
+      "review_count": 617,
+      "avg_rating": 3.8395461912479742,
+      "rolling_7d_rating": 3.8681123519860323
+    },
+    {
+      "review_date": "2026-06-28",
+      "review_count": 633,
+      "avg_rating": 3.802527646129542,
+      "rolling_7d_rating": 3.8594686052412315
+    },
+    {
+      "review_date": "2026-06-29",
+      "review_count": 674,
+      "avg_rating": 3.750741839762611,
+      "rolling_7d_rating": 3.8451174394930328
+    },
+    {
+      "review_date": "2026-06-30",
+      "review_count": 592,
+      "avg_rating": 3.675675675675676,
+      "rolling_7d_rating": 3.8173746470443577
+    },
+    {
+      "review_date": "2026-07-01",
+      "review_count": 594,
+      "avg_rating": 3.702020202020202,
+      "rolling_7d_rating": 3.7970374754103564
+    },
+    {
+      "review_date": "2026-07-02",
+      "review_count": 469,
+      "avg_rating": 3.7270788912579955,
+      "rolling_7d_rating": 3.771035758577083
+    }
+  ],
+  "_star_pct_columns": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "_star_pct_index": [
+    "2026-06-03",
+    "2026-06-04",
+    "2026-06-05",
+    "2026-06-06",
+    "2026-06-07",
+    "2026-06-08",
+    "2026-06-09",
+    "2026-06-10",
+    "2026-06-11",
+    "2026-06-12",
+    "2026-06-13",
+    "2026-06-14",
+    "2026-06-15",
+    "2026-06-16",
+    "2026-06-17",
+    "2026-06-18",
+    "2026-06-19",
+    "2026-06-20",
+    "2026-06-21",
+    "2026-06-22",
+    "2026-06-23",
+    "2026-06-24",
+    "2026-06-25",
+    "2026-06-26",
+    "2026-06-27",
+    "2026-06-28",
+    "2026-06-29",
+    "2026-06-30",
+    "2026-07-01",
+    "2026-07-02"
+  ],
+  "_star_pct_values": [
+    [
+      32.038834951456316,
+      6.796116504854369,
+      5.825242718446602,
+      7.766990291262135,
+      47.57281553398058
+    ],
+    [
+      22.366288492706644,
+      5.834683954619125,
+      4.538087520259319,
+      5.6726094003241485,
+      61.58833063209076
+    ],
+    [
+      21.915285451197054,
+      4.972375690607735,
+      4.972375690607735,
+      5.893186003683241,
+      62.246777163904234
+    ],
+    [
+      19.78021978021978,
+      4.552590266875981,
+      5.180533751962323,
+      7.064364207221351,
+      63.42229199372057
+    ],
+    [
+      19.858156028368796,
+      5.141843971631205,
+      7.624113475177305,
+      7.9787234042553195,
+      59.39716312056738
+    ],
+    [
+      20.238095238095237,
+      4.421768707482993,
+      5.1020408163265305,
+      6.292517006802721,
+      63.94557823129252
+    ],
+    [
+      20.1171875,
+      5.46875,
+      6.4453125,
+      7.03125,
+      60.9375
+    ],
+    [
+      25.268817204301076,
+      4.480286738351254,
+      4.659498207885305,
+      8.24372759856631,
+      57.34767025089605
+    ],
+    [
+      20.985691573926868,
+      5.88235294117647,
+      4.133545310015898,
+      6.836248012718602,
+      62.16216216216216
+    ],
+    [
+      19.583333333333332,
+      4.027777777777778,
+      5.416666666666667,
+      5.555555555555555,
+      65.41666666666667
+    ],
+    [
+      17.528373266078184,
+      4.791929382093317,
+      3.783102143757881,
+      5.926860025220681,
+      67.96973518284993
+    ],
+    [
+      17.99709724238026,
+      4.354136429608127,
+      5.2249637155297535,
+      6.966618287373004,
+      65.45718432510886
+    ],
+    [
+      21.647819063004846,
+      3.877221324717286,
+      4.523424878836833,
+      8.239095315024231,
+      61.7124394184168
+    ],
+    [
+      21.53846153846154,
+      4.102564102564102,
+      3.7606837606837606,
+      6.837606837606838,
+      63.760683760683754
+    ],
+    [
+      24.03361344537815,
+      5.042016806722689,
+      3.865546218487395,
+      6.5546218487394965,
+      60.50420168067227
+    ],
+    [
+      19.01081916537867,
+      4.945904173106646,
+      5.564142194744977,
+      6.491499227202473,
+      63.98763523956723
+    ],
+    [
+      16.8141592920354,
+      4.277286135693215,
+      5.457227138643068,
+      7.227138643067847,
+      66.22418879056046
+    ],
+    [
+      17.612809315866084,
+      6.11353711790393,
+      5.9679767103347885,
+      6.695778748180495,
+      63.6098981077147
+    ],
+    [
+      19.587628865979383,
+      5.596465390279824,
+      5.743740795287187,
+      7.069219440353461,
+      62.00294550810015
+    ],
+    [
+      20.64,
+      5.28,
+      5.4399999999999995,
+      5.6000000000000005,
+      63.04
+    ],
+    [
+      20.677361853832444,
+      4.27807486631016,
+      5.704099821746881,
+      6.0606060606060606,
+      63.27985739750446
+    ],
+    [
+      21.181556195965417,
+      4.322766570605188,
+      5.619596541786744,
+      6.628242074927954,
+      62.2478386167147
+    ],
+    [
+      19.9252801992528,
+      4.85678704856787,
+      4.35865504358655,
+      6.102117061021171,
+      64.75716064757161
+    ],
+    [
+      18.537414965986397,
+      6.122448979591836,
+      5.952380952380952,
+      5.612244897959184,
+      63.775510204081634
+    ],
+    [
+      20.907617504051863,
+      5.186385737439222,
+      5.348460291734198,
+      6.158833063209076,
+      62.398703403565634
+    ],
+    [
+      21.32701421800948,
+      6.161137440758294,
+      4.739336492890995,
+      6.477093206951026,
+      61.29541864139021
+    ],
+    [
+      22.997032640949556,
+      5.637982195845697,
+      4.896142433234421,
+      6.231454005934718,
+      60.23738872403561
+    ],
+    [
+      25.16891891891892,
+      5.574324324324325,
+      5.405405405405405,
+      4.222972972972973,
+      59.62837837837838
+    ],
+    [
+      23.400673400673398,
+      5.387205387205387,
+      7.07070707070707,
+      5.892255892255893,
+      58.24915824915825
+    ],
+    [
+      23.454157782515992,
+      5.330490405117271,
+      5.543710021321962,
+      6.396588486140725,
+      59.27505330490405
+    ]
+  ]
+}

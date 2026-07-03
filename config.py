@@ -45,23 +45,28 @@ COLORS = {
     "stars": ["#C44E52", "#DD8452", "#CCB974", "#55A868", "#4C72B0"],
 }
 
-# Pain-point theme keywords for topic tagging
+# Complaint categories for topic tagging and Customer Voice section
 PAIN_THEMES = {
-    "AccountBan": [
-        "ban", "banned", "suspended", "deleted account",
-        "account deleted", "shadowban",
-    ],
-    "Ads": ["ad", "ads", "advertisement", "too many ads", "advertisements"],
-    "Crashes": [
-        "crash", "crashes", "freeze", "frozen", "lag",
-        "bug", "glitch", "not working",
-    ],
     "Algorithm": [
-        "algorithm", "fyp", "for you page", "shadowban", "reach", "views",
+        "algorithm", "fyp", "for you page", "shadowban", "reach", "views", "viral",
     ],
-    "Privacy": ["privacy", "data", "spy", "track", "tracking", "steal"],
+    "Ads": ["ad", "ads", "advertisement", "too many ads", "advertisements", "promoted"],
+    "Crashes": ["crash", "crashes", "crashing", "force close", "stopped working"],
+    "Account": [
+        "ban", "banned", "suspended", "deleted account", "account deleted",
+        "shadowban", "locked out", "disabled",
+    ],
+    "Privacy": ["privacy", "data", "spy", "track", "tracking", "steal", "personal info"],
+    "Performance": [
+        "slow", "lag", "laggy", "freeze", "frozen", "bug", "glitch", "not working",
+        "battery", "overheat", "memory",
+    ],
+    "Updates": ["update", "updated", "new version", "after update", "latest update"],
+    "UI": ["ui", "interface", "layout", "design", "confusing", "hard to find", "cluttered"],
+    "Login": ["login", "log in", "sign in", "password", "authentication", "verify"],
+    "Notifications": ["notification", "notifications", "notify", "spam", "push alert"],
     "ContentModeration": [
-        "inappropriate", "children", "minor", "nsfw", "kid", "child",
+        "inappropriate", "children", "minor", "nsfw", "kid", "child", "moderation",
     ],
 }
 

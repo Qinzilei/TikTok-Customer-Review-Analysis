@@ -109,34 +109,72 @@ def top_tfidf_terms(
     return ranked[:top_n]
 
 
+def theme_keywords(theme: str) -> list[str]:
+    """Return keyword list for a complaint category."""
+    return PAIN_THEMES.get(theme, [])
+
+
+def customer_voice_entry(
+    neg_df: pd.DataFrame,
+    theme: str,
+    max_chars: int = 280,
+) -> dict | None:
+    """
+    Build a Customer Voice card for one complaint category.
+
+    Selects the highest thumbsUpCount review; never random.
+    """
+    if "themes" not in neg_df.columns:
+        neg_df = neg_df.copy()
+        neg_df["themes"] = neg_df["content"].apply(tag_themes)
+
+    mask = neg_df["themes"].apply(lambda tags: theme in tags)
+    subset = neg_df[mask].sort_values("thumbsUpCount", ascending=False)
+    if subset.empty:
+        return None
+
+    row = subset.iloc[0]
+    keywords = [kw for kw in theme_keywords(theme) if kw in str(row["content"]).lower()][:5]
+    return {
+        "theme": theme,
+        "content": str(row["content"])[:max_chars],
+        "score": int(row["score"]),
+        "thumbsUpCount": int(row["thumbsUpCount"]),
+        "keywords": keywords,
+        "review_count": int(mask.sum()),
+        "at": (
+            row["at"].isoformat()
+            if hasattr(row["at"], "isoformat")
+            else str(row["at"])
+        ),
+    }
+
+
 def representative_quotes(
     neg_df: pd.DataFrame,
     themes: list[str],
     max_chars: int = 300,
 ) -> dict[str, dict]:
-    """
-    Select the most helpful review quote per complaint theme.
-
-    Picks the review with the highest thumbsUpCount for each theme.
-    """
+    """Backward-compatible wrapper returning top quote per theme as a dict."""
     quotes: dict[str, dict] = {}
     for theme in themes:
-        mask = neg_df["themes"].apply(lambda tags: theme in tags)
-        subset = neg_df[mask].sort_values("thumbsUpCount", ascending=False)
-        if subset.empty:
-            continue
-        row = subset.iloc[0]
-        quotes[theme] = {
-            "content": str(row["content"])[:max_chars],
-            "score": int(row["score"]),
-            "thumbsUpCount": int(row["thumbsUpCount"]),
-            "at": (
-                row["at"].isoformat()
-                if hasattr(row["at"], "isoformat")
-                else str(row["at"])
-            ),
-        }
+        entry = customer_voice_entry(neg_df, theme, max_chars)
+        if entry:
+            quotes[theme] = {k: v for k, v in entry.items() if k != "theme"}
     return quotes
+
+
+
+def build_customer_voice(neg_df: pd.DataFrame) -> list[dict]:
+    """Customer Voice entries for every category with at least one matching review."""
+    entries = []
+    for theme in PAIN_THEMES:
+        entry = customer_voice_entry(neg_df, theme)
+        if entry:
+            entries.append(entry)
+    entries.sort(key=lambda x: x["review_count"], reverse=True)
+    return entries
+
 
 
 def save_json(path, payload: dict) -> None:

@@ -6,8 +6,18 @@ from datetime import datetime, timezone
 
 import pandas as pd
 
-from config import APP_NAME, METRICS_JSON, PAIN_THEMES, PROCESSED_PARQUET, ensure_dirs
+from config import APP_NAME, METRICS_JSON, PROCESSED_PARQUET, ensure_dirs
+from src.insights import (
+    compute_extended_kpis,
+    generate_business_insights,
+    generate_comparative_analysis,
+    generate_executive_summary,
+    generate_monthly_deep_dives,
+    generate_recommendations,
+    weekly_theme_trend,
+)
 from src.utils import (
+    build_customer_voice,
     detect_top_languages,
     representative_quotes,
     save_json,
@@ -98,6 +108,8 @@ def _monthly_sentiment(df: pd.DataFrame) -> pd.DataFrame:
 
 def _theme_counts(neg_df: pd.DataFrame) -> dict[str, int]:
     """Count pain-point theme occurrences in negative reviews."""
+    from config import PAIN_THEMES
+
     counts: dict[str, int] = {theme: 0 for theme in PAIN_THEMES}
     for themes in neg_df["themes"]:
         for theme in themes:
@@ -107,53 +119,6 @@ def _theme_counts(neg_df: pd.DataFrame) -> dict[str, int]:
         for theme, count in sorted(counts.items(), key=lambda x: x[1], reverse=True)
         if count > 0
     }
-
-
-def _build_insights(
-    total: int,
-    mean_rating: float,
-    pct_negative: float,
-    daily: pd.DataFrame,
-    theme_counts: dict[str, int],
-    theme_share: dict[str, float],
-    wow_change: float | None,
-) -> list[str]:
-    """Generate human-readable insight bullets for the report."""
-    peak = daily.loc[daily["review_count"].idxmax()]
-    lowest = daily.loc[daily["avg_rating"].idxmin()]
-
-    insights = [
-        (
-            f"{total:,} reviews collected over the last 30 days with an "
-            f"average rating of {mean_rating:.2f} stars."
-        ),
-        f"{pct_negative:.1f}% of reviews are negative (1–2 stars).",
-        (
-            f"Peak review volume on {peak['review_date'].date()} "
-            f"({int(peak['review_count']):,} reviews)."
-        ),
-        (
-            f"Lowest average rating on {lowest['review_date'].date()} "
-            f"({lowest['avg_rating']:.2f} stars)."
-        ),
-    ]
-
-    top_themes = list(theme_counts.keys())[:3]
-    if top_themes:
-        theme_str = ", ".join(
-            f"{theme} ({theme_share[theme]}% of negative)" for theme in top_themes
-        )
-        insights.append(
-            f"Top complaint themes among negative reviews: {theme_str}."
-        )
-
-    if wow_change is not None:
-        direction = "improved" if wow_change > 0 else "declined"
-        insights.append(
-            f"Average rating {direction} by {abs(wow_change):.2f} stars week-over-week."
-        )
-
-    return insights
 
 
 def analyze_reviews() -> dict:
@@ -170,6 +135,7 @@ def analyze_reviews() -> dict:
     df["review_date"] = pd.to_datetime(df["review_date"])
 
     neg_df = df[df["is_negative"]].copy()
+    pos_df = df[df["score"] >= 4].copy()
     neg_df["themes"] = neg_df["content"].apply(tag_themes)
 
     daily = _daily_aggregates(df)
@@ -180,18 +146,15 @@ def analyze_reviews() -> dict:
     theme_counts = _theme_counts(neg_df)
 
     neg_texts = neg_df.loc[neg_df["text_length"] >= 10, "content"].tolist()
+    pos_texts = pos_df.loc[pos_df["text_length"] >= 10, "content"].tolist()
     all_texts = df.loc[df["text_length"] >= 10, "content"].tolist()
+
     tfidf_terms = top_tfidf_terms(neg_texts)
     top_keywords = top_tfidf_terms(all_texts, top_n=20)
-    word_freq = word_frequencies(all_texts, top_n=80)
+    word_freq_all = word_frequencies(all_texts, top_n=80)
+    word_freq_neg = word_frequencies(neg_texts, top_n=80)
+    word_freq_pos = word_frequencies(pos_texts, top_n=80)
     top_languages = detect_top_languages(all_texts)
-
-    version_col = (
-        "appVersion" if "appVersion" in neg_df.columns else "reviewCreatedVersion"
-    )
-    top_versions = (
-        neg_df[version_col].fillna("Unknown").value_counts().head(5).to_dict()
-    )
 
     total = len(df)
     num_days = max((df["review_date"].max() - df["review_date"].min()).days + 1, 1)
@@ -204,15 +167,14 @@ def analyze_reviews() -> dict:
 
     peak_month_row = monthly.loc[monthly["review_count"].idxmax()]
     lowest_month_row = monthly.loc[monthly["avg_rating"].idxmin()]
-
     peak_day_row = daily.loc[daily["review_count"].idxmax()]
     lowest_day_row = daily.loc[daily["avg_rating"].idxmin()]
 
-    wow_change: float | None = None
-    if len(daily) >= 14:
-        recent = daily.tail(7)["avg_rating"].mean()
-        prior = daily.iloc[-14:-7]["avg_rating"].mean()
-        wow_change = round(recent - prior, 3)
+    extended_kpis = compute_extended_kpis(df, daily)
+    extended_kpis["dominant_language"] = (
+        top_languages[0][0] if top_languages else "English"
+    )
+    extended_kpis["pct_dev_reply"] = pct_dev_reply
 
     top_themes = list(theme_counts.keys())[:3]
     theme_share = {
@@ -220,15 +182,24 @@ def analyze_reviews() -> dict:
         for theme in top_themes
     }
 
+    comparative = generate_comparative_analysis(df, neg_df)
+    executive_summary = generate_executive_summary(
+        df, daily, monthly, theme_counts, extended_kpis
+    )
+    monthly_deep_dives = generate_monthly_deep_dives(df, neg_df, monthly)
+    business_insights = generate_business_insights(
+        df, neg_df, theme_counts, comparative
+    )
+    recommendations = generate_recommendations(
+        theme_counts, {**extended_kpis, "pct_dev_reply": pct_dev_reply}, executive_summary
+    )
+
+    customer_voice = build_customer_voice(neg_df)
     quotes = representative_quotes(neg_df, list(theme_counts.keys())[:5])
+    topic_trend = weekly_theme_trend(neg_df)
 
     sentiment_dist = (
         df["sentiment_label"].value_counts(normalize=True).mul(100).round(1).to_dict()
-    )
-
-    insights = _build_insights(
-        total, mean_rating, pct_negative, daily,
-        theme_counts, theme_share, wow_change,
     )
 
     metrics = {
@@ -261,7 +232,7 @@ def analyze_reviews() -> dict:
             "date": str(lowest_day_row["review_date"].date()),
             "avg_rating": round(float(lowest_day_row["avg_rating"]), 2),
         },
-        "wow_rating_change": wow_change,
+        **extended_kpis,
         "star_distribution": {
             str(k): int(v)
             for k, v in df["score"].value_counts().sort_index().items()
@@ -269,7 +240,6 @@ def analyze_reviews() -> dict:
         "sentiment_distribution": sentiment_dist,
         "theme_counts": theme_counts,
         "theme_share_of_negative_pct": theme_share,
-        "top_negative_versions": top_versions,
         "tfidf_terms": [
             {"term": term, "score": round(float(score), 4)}
             for term, score in tfidf_terms
@@ -278,10 +248,19 @@ def analyze_reviews() -> dict:
             {"term": term, "score": round(float(score), 4)}
             for term, score in top_keywords
         ],
-        "word_frequencies": [{"word": w, "count": c} for w, c in word_freq],
+        "word_frequencies": [{"word": w, "count": c} for w, c in word_freq_all],
+        "word_frequencies_negative": [{"word": w, "count": c} for w, c in word_freq_neg],
+        "word_frequencies_positive": [{"word": w, "count": c} for w, c in word_freq_pos],
         "top_languages": [{"language": lang, "count": c} for lang, c in top_languages],
+        "customer_voice": customer_voice,
         "representative_quotes": quotes,
-        "insights": insights,
+        "executive_summary": executive_summary,
+        "business_insights": business_insights,
+        "comparative_analysis": comparative,
+        "monthly_deep_dives": monthly_deep_dives,
+        "recommendations": recommendations,
+        "insights": executive_summary,
+        "_topic_trend": topic_trend,
         "_daily": [
             {
                 "review_date": str(row["review_date"].date()),

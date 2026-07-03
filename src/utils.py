@@ -149,3 +149,83 @@ def save_json(path, payload: dict) -> None:
 def escape_html(value: Any) -> str:
     """Escape a value for safe HTML embedding."""
     return html.escape(str(value))
+
+
+def word_frequencies(texts: list[str], top_n: int = 80) -> list[tuple[str, int]]:
+    """
+    Count word frequencies across review texts for word-cloud visualization.
+
+    Filters English stop words and short tokens.
+    """
+    from collections import Counter
+
+    from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS
+
+    counter: Counter = Counter()
+    token_re = re.compile(r"[a-zA-Z']{3,}")
+    for text in texts:
+        tokens = [
+            t.lower()
+            for t in token_re.findall(text.lower())
+            if t.lower() not in ENGLISH_STOP_WORDS
+        ]
+        counter.update(tokens)
+    return counter.most_common(top_n)
+
+
+def detect_top_languages(
+    texts: list[str],
+    sample_size: int = 3000,
+    top_n: int = 8,
+) -> list[tuple[str, int]]:
+    """
+    Detect review languages via langdetect on a random sample.
+
+    Returns list of (language_name, count) sorted by frequency.
+    """
+    from collections import Counter
+
+    try:
+        from langdetect import DetectorFactory, detect
+
+        DetectorFactory.seed = 0
+    except ImportError:
+        return [("English (en-US store)", len(texts))]
+
+    lang_names = {
+        "en": "English",
+        "es": "Spanish",
+        "pt": "Portuguese",
+        "fr": "French",
+        "de": "German",
+        "id": "Indonesian",
+        "hi": "Hindi",
+        "ar": "Arabic",
+        "ru": "Russian",
+        "tl": "Tagalog",
+        "vi": "Vietnamese",
+        "tr": "Turkish",
+        "ko": "Korean",
+        "ja": "Japanese",
+        "zh-cn": "Chinese",
+        "zh-tw": "Chinese",
+    }
+
+    sample = texts[:sample_size] if len(texts) <= sample_size else [
+        texts[i] for i in sorted(
+            __import__("random").sample(range(len(texts)), sample_size)
+        )
+    ]
+
+    counts: Counter = Counter()
+    for text in sample:
+        if len(text.strip()) < 15:
+            continue
+        try:
+            code = detect(text)
+            counts[lang_names.get(code, code.upper())] += 1
+        except Exception:  # noqa: BLE001
+            counts["Unknown"] += 1
+
+    return counts.most_common(top_n)
+

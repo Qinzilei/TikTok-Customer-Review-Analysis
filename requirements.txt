@@ -4,3 +4,4 @@ pyarrow>=14.0.0
 plotly>=5.18.0
 scikit-learn>=1.4.0
 vaderSentiment>=3.3.2
+langdetect>=1.0.9

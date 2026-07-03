@@ -1,29 +1,40 @@
 {
   "app_name": "TikTok",
-  "analyzed_at": "2026-07-03T18:26:44.956640+00:00",
+  "analyzed_at": "2026-07-03T18:56:32.844593+00:00",
   "date_range": {
     "start": "2026-06-03",
     "end": "2026-07-02"
   },
-  "total_reviews": 18293,
+  "total_reviews": 18279,
   "mean_rating": 3.849,
+  "median_rating": 5.0,
+  "pct_positive": 69.0,
   "pct_negative": 25.8,
+  "reviews_per_day": 609.3,
   "pct_dev_reply": 83.3,
+  "peak_month": {
+    "label": "Jun 2026",
+    "count": 17216
+  },
+  "lowest_rating_month": {
+    "label": "Jul 2026",
+    "avg_rating": 3.71
+  },
   "peak_day": {
     "date": "2026-06-25",
     "count": 803
   },
   "lowest_rating_day": {
     "date": "2026-06-03",
-    "avg_rating": 3.32
+    "avg_rating": 3.24
   },
   "wow_rating_change": -0.126,
   "star_distribution": {
-    "1": 3799,
+    "1": 3795,
     "2": 921,
     "3": 954,
     "4": 1185,
-    "5": 11434
+    "5": 11424
   },
   "sentiment_distribution": {
     "positive": 61.1,
@@ -32,10 +43,10 @@
   },
   "theme_counts": {
     "Algorithm": 241,
-    "Ads": 236,
+    "Ads": 235,
     "Crashes": 228,
     "AccountBan": 191,
-    "Privacy": 86,
+    "Privacy": 85,
     "ContentModeration": 74
   },
   "theme_share_of_negative_pct": {
@@ -44,154 +55,510 @@
     "Crashes": 4.8
   },
   "top_negative_versions": {
-    "Unknown": 1532,
+    "Unknown": 1531,
     "45.5.4": 924,
     "45.7.3": 836,
-    "45.4.3": 542,
+    "45.4.3": 540,
     "45.3.3": 79
   },
   "tfidf_terms": [
     {
       "term": "app",
-      "score": 299.0274
+      "score": 298.4349
     },
     {
       "term": "tiktok",
-      "score": 228.8571
+      "score": 229.3088
     },
     {
       "term": "account",
-      "score": 118.5186
+      "score": 118.2869
     },
     {
       "term": "like",
-      "score": 99.3139
+      "score": 98.8339
     },
     {
       "term": "videos",
-      "score": 98.2438
+      "score": 97.9477
     },
     {
       "term": "don",
-      "score": 97.2468
+      "score": 96.7228
     },
     {
       "term": "video",
-      "score": 91.4194
+      "score": 90.7627
     },
     {
       "term": "just",
-      "score": 89.1018
+      "score": 88.7459
     },
     {
       "term": "good",
-      "score": 88.1337
+      "score": 88.1164
     },
     {
       "term": "time",
-      "score": 79.9978
+      "score": 79.7923
     },
     {
       "term": "ads",
-      "score": 78.9409
+      "score": 78.4356
     },
     {
       "term": "bad",
-      "score": 78.035
+      "score": 78.1077
     },
     {
       "term": "update",
-      "score": 77.1323
+      "score": 77.2848
     },
     {
       "term": "fix",
-      "score": 66.3508
+      "score": 66.307
     },
     {
       "term": "people",
-      "score": 65.0639
+      "score": 65.0818
     }
   ],
   "top_keywords": [
     {
       "term": "app",
-      "score": 1071.7391
+      "score": 1070.9567
     },
     {
       "term": "good",
-      "score": 781.8138
+      "score": 780.7632
     },
     {
       "term": "tiktok",
-      "score": 740.7304
+      "score": 740.3757
     },
     {
       "term": "love",
-      "score": 459.1859
+      "score": 457.1595
     },
     {
       "term": "best",
-      "score": 340.9291
+      "score": 340.3685
     },
     {
       "term": "like",
-      "score": 330.655
+      "score": 330.2728
     },
     {
       "term": "nice",
-      "score": 314.6788
+      "score": 314.5072
     },
     {
       "term": "account",
-      "score": 269.4003
+      "score": 269.3471
     },
     {
       "term": "video",
-      "score": 245.8753
+      "score": 245.7066
     },
     {
       "term": "videos",
-      "score": 233.6376
+      "score": 233.6096
     },
     {
       "term": "good app",
-      "score": 205.5167
+      "score": 204.7595
     },
     {
       "term": "just",
-      "score": 196.5062
+      "score": 196.3878
     },
     {
       "term": "don",
-      "score": 177.6376
+      "score": 177.5042
     },
     {
       "term": "time",
-      "score": 174.289
+      "score": 174.1002
     },
     {
       "term": "use",
-      "score": 159.2732
+      "score": 159.1616
     },
     {
       "term": "great",
-      "score": 157.0125
+      "score": 156.6754
     },
     {
       "term": "amazing",
-      "score": 156.0172
+      "score": 155.2329
     },
     {
       "term": "best app",
-      "score": 155.0563
+      "score": 154.3094
     },
     {
       "term": "love app",
-      "score": 154.2459
+      "score": 154.1281
     },
     {
       "term": "live",
-      "score": 150.3158
+      "score": 151.0721
+    }
+  ],
+  "word_frequencies": [
+    {
+      "word": "app",
+      "count": 4721
+    },
+    {
+      "word": "tiktok",
+      "count": 3179
+    },
+    {
+      "word": "good",
+      "count": 1794
+    },
+    {
+      "word": "it's",
+      "count": 1392
+    },
+    {
+      "word": "like",
+      "count": 1120
+    },
+    {
+      "word": "account",
+      "count": 1095
+    },
+    {
+      "word": "love",
+      "count": 1063
+    },
+    {
+      "word": "videos",
+      "count": 927
+    },
+    {
+      "word": "video",
+      "count": 840
+    },
+    {
+      "word": "just",
+      "count": 727
+    },
+    {
+      "word": "best",
+      "count": 726
+    },
+    {
+      "word": "don't",
+      "count": 647
+    },
+    {
+      "word": "can't",
+      "count": 607
+    },
+    {
+      "word": "time",
+      "count": 586
+    },
+    {
+      "word": "nice",
+      "count": 574
+    },
+    {
+      "word": "people",
+      "count": 565
+    },
+    {
+      "word": "use",
+      "count": 496
+    },
+    {
+      "word": "i'm",
+      "count": 444
+    },
+    {
+      "word": "problem",
+      "count": 427
+    },
+    {
+      "word": "really",
+      "count": 425
+    },
+    {
+      "word": "live",
+      "count": 421
+    },
+    {
+      "word": "update",
+      "count": 418
+    },
+    {
+      "word": "fix",
+      "count": 413
+    },
+    {
+      "word": "tik",
+      "count": 391
+    },
+    {
+      "word": "tok",
+      "count": 387
+    },
+    {
+      "word": "make",
+      "count": 386
+    },
+    {
+      "word": "phone",
+      "count": 380
+    },
+    {
+      "word": "great",
+      "count": 368
+    },
+    {
+      "word": "want",
+      "count": 356
+    },
+    {
+      "word": "content",
+      "count": 348
+    },
+    {
+      "word": "new",
+      "count": 336
+    },
+    {
+      "word": "bad",
+      "count": 307
+    },
+    {
+      "word": "team",
+      "count": 301
+    },
+    {
+      "word": "ads",
+      "count": 300
+    },
+    {
+      "word": "amazing",
+      "count": 294
+    },
+    {
+      "word": "help",
+      "count": 283
+    },
+    {
+      "word": "viral",
+      "count": 280
+    },
+    {
+      "word": "doesn't",
+      "count": 275
+    },
+    {
+      "word": "work",
+      "count": 274
+    },
+    {
+      "word": "fun",
+      "count": 262
+    },
+    {
+      "word": "open",
+      "count": 261
+    },
+    {
+      "word": "views",
+      "count": 255
+    },
+    {
+      "word": "working",
+      "count": 254
+    },
+    {
+      "word": "know",
+      "count": 248
+    },
+    {
+      "word": "post",
+      "count": 245
+    },
+    {
+      "word": "option",
+      "count": 241
+    },
+    {
+      "word": "friends",
+      "count": 239
+    },
+    {
+      "word": "keeps",
+      "count": 231
+    },
+    {
+      "word": "got",
+      "count": 231
+    },
+    {
+      "word": "need",
+      "count": 231
+    },
+    {
+      "word": "banned",
+      "count": 224
+    },
+    {
+      "word": "comments",
+      "count": 224
+    },
+    {
+      "word": "watch",
+      "count": 223
+    },
+    {
+      "word": "issue",
+      "count": 218
+    },
+    {
+      "word": "let",
+      "count": 209
+    },
+    {
+      "word": "reason",
+      "count": 208
+    },
+    {
+      "word": "i've",
+      "count": 208
+    },
+    {
+      "word": "support",
+      "count": 205
+    },
+    {
+      "word": "apps",
+      "count": 204
+    },
+    {
+      "word": "better",
+      "count": 203
+    },
+    {
+      "word": "try",
+      "count": 201
+    },
+    {
+      "word": "download",
+      "count": 199
+    },
+    {
+      "word": "using",
+      "count": 189
+    },
+    {
+      "word": "slow",
+      "count": 188
+    },
+    {
+      "word": "comment",
+      "count": 186
+    },
+    {
+      "word": "getting",
+      "count": 185
+    },
+    {
+      "word": "thank",
+      "count": 183
+    },
+    {
+      "word": "things",
+      "count": 183
+    },
+    {
+      "word": "lot",
+      "count": 174
+    },
+    {
+      "word": "way",
+      "count": 173
+    },
+    {
+      "word": "message",
+      "count": 166
+    },
+    {
+      "word": "community",
+      "count": 164
+    },
+    {
+      "word": "experience",
+      "count": 164
+    },
+    {
+      "word": "add",
+      "count": 162
+    },
+    {
+      "word": "follow",
+      "count": 161
+    },
+    {
+      "word": "going",
+      "count": 161
+    },
+    {
+      "word": "thanks",
+      "count": 160
+    },
+    {
+      "word": "won't",
+      "count": 159
+    },
+    {
+      "word": "plz",
+      "count": 158
+    },
+    {
+      "word": "stop",
+      "count": 157
+    }
+  ],
+  "top_languages": [
+    {
+      "language": "English",
+      "count": 2020
+    },
+    {
+      "language": "NO",
+      "count": 69
+    },
+    {
+      "language": "AF",
+      "count": 54
+    },
+    {
+      "language": "IT",
+      "count": 30
+    },
+    {
+      "language": "SK",
+      "count": 28
+    },
+    {
+      "language": "BN",
+      "count": 26
+    },
+    {
+      "language": "ET",
+      "count": 22
+    },
+    {
+      "language": "Indonesian",
+      "count": 21
     }
   ],
   "representative_quotes": {
@@ -227,444 +594,308 @@
     }
   },
   "insights": [
-    "18,293 reviews collected over the last 30 days with an average rating of 3.85 stars.",
+    "18,279 reviews collected over the last 30 days with an average rating of 3.85 stars.",
     "25.8% of reviews are negative (1–2 stars).",
-    "Peak review volume on 2026-06-25 00:00:00 (803 reviews).",
-    "Lowest average rating on 2026-06-03 00:00:00 (3.32 stars).",
+    "Peak review volume on 2026-06-25 (803 reviews).",
+    "Lowest average rating on 2026-06-03 (3.24 stars).",
     "Top complaint themes among negative reviews: Algorithm (5.1% of negative), Ads (5.0% of negative), Crashes (4.8% of negative).",
     "Average rating declined by 0.13 stars week-over-week."
   ],
   "_daily": [
     {
       "review_date": "2026-06-03",
-      "review_count": 103,
-      "avg_rating": 3.320388349514563,
-      "rolling_7d_rating": 3.320388349514563
+      "review_count": 89,
+      "avg_rating": 3.235955056179775,
+      "rolling_7d_rating": 3.235955056179775,
+      "rolling_7d_volume": 89.0
     },
     {
       "review_date": "2026-06-04",
       "review_count": 617,
       "avg_rating": 3.782820097244733,
-      "rolling_7d_rating": 3.551604223379648
+      "rolling_7d_rating": 3.509387576712254,
+      "rolling_7d_volume": 353.0
     },
     {
       "review_date": "2026-06-05",
       "review_count": 543,
       "avg_rating": 3.8158379373848987,
-      "rolling_7d_rating": 3.639682128048065
+      "rolling_7d_rating": 3.611537696936469,
+      "rolling_7d_volume": 416.3333333333333
     },
     {
       "review_date": "2026-06-06",
       "review_count": 637,
       "avg_rating": 3.8979591836734695,
-      "rolling_7d_rating": 3.7042513919544158
+      "rolling_7d_rating": 3.683143068620719,
+      "rolling_7d_volume": 471.5
     },
     {
       "review_date": "2026-06-07",
       "review_count": 564,
       "avg_rating": 3.8191489361702127,
-      "rolling_7d_rating": 3.727230900797575
+      "rolling_7d_rating": 3.710344242130618,
+      "rolling_7d_volume": 490.0
     },
     {
       "review_date": "2026-06-08",
       "review_count": 588,
       "avg_rating": 3.892857142857143,
-      "rolling_7d_rating": 3.75483527447417
+      "rolling_7d_rating": 3.740763058918372,
+      "rolling_7d_volume": 506.3333333333333
     },
     {
       "review_date": "2026-06-09",
       "review_count": 512,
       "avg_rating": 3.83203125,
-      "rolling_7d_rating": 3.76586327097786
+      "rolling_7d_rating": 3.753801371930033,
+      "rolling_7d_volume": 507.14285714285717
     },
     {
       "review_date": "2026-06-10",
       "review_count": 558,
       "avg_rating": 3.6792114695340503,
-      "rolling_7d_rating": 3.8171237166949297
+      "rolling_7d_rating": 3.8171237166949297,
+      "rolling_7d_volume": 574.1428571428571
     },
     {
       "review_date": "2026-06-11",
       "review_count": 629,
       "avg_rating": 3.833068362480127,
-      "rolling_7d_rating": 3.824302040299986
+      "rolling_7d_rating": 3.8243020402999863,
+      "rolling_7d_volume": 575.8571428571429
     },
     {
       "review_date": "2026-06-12",
       "review_count": 720,
       "avg_rating": 3.9319444444444445,
-      "rolling_7d_rating": 3.840888684165635
+      "rolling_7d_rating": 3.8408886841656353,
+      "rolling_7d_volume": 601.1428571428571
     },
     {
       "review_date": "2026-06-13",
       "review_count": 793,
       "avg_rating": 4.020176544766708,
-      "rolling_7d_rating": 3.858348307178955
+      "rolling_7d_rating": 3.858348307178955,
+      "rolling_7d_volume": 623.4285714285714
     },
     {
       "review_date": "2026-06-14",
       "review_count": 689,
       "avg_rating": 3.9753265602322205,
-      "rolling_7d_rating": 3.88065939633067
+      "rolling_7d_rating": 3.8806593963306706,
+      "rolling_7d_volume": 641.2857142857143
     },
     {
       "review_date": "2026-06-15",
       "review_count": 619,
       "avg_rating": 3.8449111470113086,
-      "rolling_7d_rating": 3.873809968352694
+      "rolling_7d_rating": 3.8738099683526945,
+      "rolling_7d_volume": 645.7142857142857
     },
     {
       "review_date": "2026-06-16",
       "review_count": 585,
       "avg_rating": 3.871794871794872,
-      "rolling_7d_rating": 3.8794904857519614
+      "rolling_7d_rating": 3.879490485751962,
+      "rolling_7d_volume": 656.1428571428571
     },
     {
       "review_date": "2026-06-17",
       "review_count": 595,
       "avg_rating": 3.7445378151260504,
-      "rolling_7d_rating": 3.888822820836533
+      "rolling_7d_rating": 3.888822820836533,
+      "rolling_7d_volume": 661.4285714285714
     },
     {
       "review_date": "2026-06-18",
       "review_count": 647,
       "avg_rating": 3.9149922720247297,
-      "rolling_7d_rating": 3.9005262364857622
+      "rolling_7d_rating": 3.9005262364857614,
+      "rolling_7d_volume": 664.0
     },
     {
       "review_date": "2026-06-19",
       "review_count": 678,
       "avg_rating": 4.017699115044247,
-      "rolling_7d_rating": 3.9127769037143056
+      "rolling_7d_rating": 3.912776903714305,
+      "rolling_7d_volume": 658.0
     },
     {
       "review_date": "2026-06-20",
       "review_count": 687,
       "avg_rating": 3.925764192139738,
-      "rolling_7d_rating": 3.899289424767595
+      "rolling_7d_rating": 3.899289424767595,
+      "rolling_7d_volume": 642.8571428571429
     },
     {
       "review_date": "2026-06-21",
       "review_count": 679,
       "avg_rating": 3.8630338733431517,
-      "rolling_7d_rating": 3.883247612354871
+      "rolling_7d_rating": 3.883247612354871,
+      "rolling_7d_volume": 641.4285714285714
     },
     {
       "review_date": "2026-06-22",
       "review_count": 625,
       "avg_rating": 3.8512,
-      "rolling_7d_rating": 3.8841460199246844
+      "rolling_7d_rating": 3.884146019924684,
+      "rolling_7d_volume": 642.2857142857143
     },
     {
       "review_date": "2026-06-23",
       "review_count": 561,
       "avg_rating": 3.8698752228163995,
-      "rolling_7d_rating": 3.883871784356331
+      "rolling_7d_rating": 3.8838717843563306,
+      "rolling_7d_volume": 638.8571428571429
     },
     {
       "review_date": "2026-06-24",
       "review_count": 694,
       "avg_rating": 3.844380403458213,
-      "rolling_7d_rating": 3.8981350112609254
+      "rolling_7d_rating": 3.898135011260926,
+      "rolling_7d_volume": 653.0
     },
     {
       "review_date": "2026-06-25",
       "review_count": 803,
       "avg_rating": 3.909090909090909,
-      "rolling_7d_rating": 3.897291959413237
+      "rolling_7d_rating": 3.8972919594132374,
+      "rolling_7d_volume": 675.2857142857143
     },
     {
       "review_date": "2026-06-26",
       "review_count": 588,
       "avg_rating": 3.8996598639455784,
-      "rolling_7d_rating": 3.8804292092562847
+      "rolling_7d_rating": 3.880429209256284,
+      "rolling_7d_volume": 662.4285714285714
     },
     {
       "review_date": "2026-06-27",
       "review_count": 617,
       "avg_rating": 3.8395461912479742,
-      "rolling_7d_rating": 3.8681123519860323
+      "rolling_7d_rating": 3.8681123519860323,
+      "rolling_7d_volume": 652.4285714285714
     },
     {
       "review_date": "2026-06-28",
       "review_count": 633,
       "avg_rating": 3.802527646129542,
-      "rolling_7d_rating": 3.8594686052412315
+      "rolling_7d_rating": 3.8594686052412306,
+      "rolling_7d_volume": 645.8571428571429
     },
     {
       "review_date": "2026-06-29",
       "review_count": 674,
       "avg_rating": 3.750741839762611,
-      "rolling_7d_rating": 3.8451174394930328
+      "rolling_7d_rating": 3.8451174394930328,
+      "rolling_7d_volume": 652.8571428571429
     },
     {
       "review_date": "2026-06-30",
       "review_count": 592,
       "avg_rating": 3.675675675675676,
-      "rolling_7d_rating": 3.8173746470443577
+      "rolling_7d_rating": 3.8173746470443577,
+      "rolling_7d_volume": 657.2857142857143
     },
     {
       "review_date": "2026-07-01",
       "review_count": 594,
       "avg_rating": 3.702020202020202,
-      "rolling_7d_rating": 3.7970374754103564
+      "rolling_7d_rating": 3.797037475410356,
+      "rolling_7d_volume": 643.0
     },
     {
       "review_date": "2026-07-02",
       "review_count": 469,
       "avg_rating": 3.7270788912579955,
-      "rolling_7d_rating": 3.771035758577083
+      "rolling_7d_rating": 3.7710357585770824,
+      "rolling_7d_volume": 595.2857142857143
     }
   ],
-  "_star_pct_columns": [
-    1,
-    2,
-    3,
-    4,
-    5
+  "_weekly": [
+    {
+      "week": "2026-06-01",
+      "review_count": 2450,
+      "avg_rating": 3.8085714285714287
+    },
+    {
+      "week": "2026-06-08",
+      "review_count": 4489,
+      "avg_rating": 3.8924036533749167
+    },
+    {
+      "week": "2026-06-15",
+      "review_count": 4490,
+      "avg_rating": 3.88641425389755
+    },
+    {
+      "week": "2026-06-22",
+      "review_count": 4521,
+      "avg_rating": 3.8606502986065028
+    },
+    {
+      "week": "2026-06-29",
+      "review_count": 2329,
+      "avg_rating": 3.7144697294976385
+    }
   ],
-  "_star_pct_index": [
-    "2026-06-03",
-    "2026-06-04",
-    "2026-06-05",
-    "2026-06-06",
-    "2026-06-07",
-    "2026-06-08",
-    "2026-06-09",
-    "2026-06-10",
-    "2026-06-11",
-    "2026-06-12",
-    "2026-06-13",
-    "2026-06-14",
-    "2026-06-15",
-    "2026-06-16",
-    "2026-06-17",
-    "2026-06-18",
-    "2026-06-19",
-    "2026-06-20",
-    "2026-06-21",
-    "2026-06-22",
-    "2026-06-23",
-    "2026-06-24",
-    "2026-06-25",
-    "2026-06-26",
-    "2026-06-27",
-    "2026-06-28",
-    "2026-06-29",
-    "2026-06-30",
-    "2026-07-01",
-    "2026-07-02"
+  "_monthly": [
+    {
+      "month": "Jun 2026",
+      "month_iso": "2026-06-01",
+      "review_count": 17216,
+      "avg_rating": 3.857574349442379,
+      "growth_pct": null
+    },
+    {
+      "month": "Jul 2026",
+      "month_iso": "2026-07-01",
+      "review_count": 1063,
+      "avg_rating": 3.7130761994355597,
+      "growth_pct": -93.8
+    }
   ],
-  "_star_pct_values": [
-    [
-      32.038834951456316,
-      6.796116504854369,
-      5.825242718446602,
-      7.766990291262135,
-      47.57281553398058
+  "_monthly_stars": {
+    "months": [
+      "Jun 2026",
+      "Jul 2026"
     ],
-    [
-      22.366288492706644,
-      5.834683954619125,
-      4.538087520259319,
-      5.6726094003241485,
-      61.58833063209076
-    ],
-    [
-      21.915285451197054,
-      4.972375690607735,
-      4.972375690607735,
-      5.893186003683241,
-      62.246777163904234
-    ],
-    [
-      19.78021978021978,
-      4.552590266875981,
-      5.180533751962323,
-      7.064364207221351,
-      63.42229199372057
-    ],
-    [
-      19.858156028368796,
-      5.141843971631205,
-      7.624113475177305,
-      7.9787234042553195,
-      59.39716312056738
-    ],
-    [
-      20.238095238095237,
-      4.421768707482993,
-      5.1020408163265305,
-      6.292517006802721,
-      63.94557823129252
-    ],
-    [
-      20.1171875,
-      5.46875,
-      6.4453125,
-      7.03125,
-      60.9375
-    ],
-    [
-      25.268817204301076,
-      4.480286738351254,
-      4.659498207885305,
-      8.24372759856631,
-      57.34767025089605
-    ],
-    [
-      20.985691573926868,
-      5.88235294117647,
-      4.133545310015898,
-      6.836248012718602,
-      62.16216216216216
-    ],
-    [
-      19.583333333333332,
-      4.027777777777778,
-      5.416666666666667,
-      5.555555555555555,
-      65.41666666666667
-    ],
-    [
-      17.528373266078184,
-      4.791929382093317,
-      3.783102143757881,
-      5.926860025220681,
-      67.96973518284993
-    ],
-    [
-      17.99709724238026,
-      4.354136429608127,
-      5.2249637155297535,
-      6.966618287373004,
-      65.45718432510886
-    ],
-    [
-      21.647819063004846,
-      3.877221324717286,
-      4.523424878836833,
-      8.239095315024231,
-      61.7124394184168
-    ],
-    [
-      21.53846153846154,
-      4.102564102564102,
-      3.7606837606837606,
-      6.837606837606838,
-      63.760683760683754
-    ],
-    [
-      24.03361344537815,
-      5.042016806722689,
-      3.865546218487395,
-      6.5546218487394965,
-      60.50420168067227
-    ],
-    [
-      19.01081916537867,
-      4.945904173106646,
-      5.564142194744977,
-      6.491499227202473,
-      63.98763523956723
-    ],
-    [
-      16.8141592920354,
-      4.277286135693215,
-      5.457227138643068,
-      7.227138643067847,
-      66.22418879056046
-    ],
-    [
-      17.612809315866084,
-      6.11353711790393,
-      5.9679767103347885,
-      6.695778748180495,
-      63.6098981077147
-    ],
-    [
-      19.587628865979383,
-      5.596465390279824,
-      5.743740795287187,
-      7.069219440353461,
-      62.00294550810015
-    ],
-    [
-      20.64,
-      5.28,
-      5.4399999999999995,
-      5.6000000000000005,
-      63.04
-    ],
-    [
-      20.677361853832444,
-      4.27807486631016,
-      5.704099821746881,
-      6.0606060606060606,
-      63.27985739750446
-    ],
-    [
-      21.181556195965417,
-      4.322766570605188,
-      5.619596541786744,
-      6.628242074927954,
-      62.2478386167147
-    ],
-    [
-      19.9252801992528,
-      4.85678704856787,
-      4.35865504358655,
-      6.102117061021171,
-      64.75716064757161
-    ],
-    [
-      18.537414965986397,
-      6.122448979591836,
-      5.952380952380952,
-      5.612244897959184,
-      63.775510204081634
-    ],
-    [
-      20.907617504051863,
-      5.186385737439222,
-      5.348460291734198,
-      6.158833063209076,
-      62.398703403565634
-    ],
-    [
-      21.32701421800948,
-      6.161137440758294,
-      4.739336492890995,
-      6.477093206951026,
-      61.29541864139021
-    ],
-    [
-      22.997032640949556,
-      5.637982195845697,
-      4.896142433234421,
-      6.231454005934718,
-      60.23738872403561
-    ],
-    [
-      25.16891891891892,
-      5.574324324324325,
-      5.405405405405405,
-      4.222972972972973,
-      59.62837837837838
-    ],
-    [
-      23.400673400673398,
-      5.387205387205387,
-      7.07070707070707,
-      5.892255892255893,
-      58.24915824915825
-    ],
-    [
-      23.454157782515992,
-      5.330490405117271,
-      5.543710021321962,
-      6.396588486140725,
-      59.27505330490405
-    ]
+    "stars": {
+      "1": [
+        3546,
+        249
+      ],
+      "2": [
+        864,
+        57
+      ],
+      "3": [
+        886,
+        68
+      ],
+      "4": [
+        1120,
+        65
+      ],
+      "5": [
+        10800,
+        624
+      ]
+    }
+  },
+  "_monthly_sentiment": [
+    {
+      "month": "Jun 2026",
+      "positive": 61.1,
+      "neutral": 23.4,
+      "negative": 15.5
+    },
+    {
+      "month": "Jul 2026",
+      "positive": 60.4,
+      "neutral": 23.1,
+      "negative": 16.5
+    }
   ]
 }

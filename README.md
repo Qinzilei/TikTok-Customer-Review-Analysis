@@ -2,7 +2,7 @@
 
 Production-ready Python pipeline for scraping, cleaning, analyzing, and reporting on TikTok Google Play reviews from the last 30 days.
 
-**Live demo:** [Interactive HTML Report](https://qinzilei.github.io/TikTok-Customer-Review-Analysis/)
+**Live demo:** [Executive Analytics Dashboard](https://qinzilei.github.io/TikTok-Customer-Review-Analysis/)
 
 **Target app:** [TikTok on Google Play](https://play.google.com/store/apps/details?id=com.zhiliaoapp.musically&hl=en_us) (`com.zhiliaoapp.musically`, en-US)
 
@@ -58,7 +58,7 @@ python run_pipeline.py --skip-scrape
 - **Scraping:** Paginated fetch (Sort.NEWEST) with 30-day UTC cutoff and retry backoff
 - **Cleaning:** Deduplication, type coercion, derived features, VADER sentiment labels
 - **Analysis:** Volume/trend metrics, pain-point theme tagging, TF-IDF keyword extraction
-- **Visualization:** Interactive Plotly charts embedded in a polished HTML report
+- **Visualization:** Dark-theme executive dashboard with interactive Plotly charts (KPI cards, word cloud, sentiment trends)
 - **Exports:** Parquet (primary) and CSV (human-readable) datasets
 
 ## Methodology
